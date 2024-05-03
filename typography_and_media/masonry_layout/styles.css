@@ -1,0 +1,63 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+figure {
+  margin: 0;
+}
+
+/* Styles */
+:root {
+  --gap: 16px;
+  --gap-sm: 8px;
+}
+
+img {
+  display: block;
+  /*
+    - `display: block`:
+    Images are `display: inline` by default, so the browser treats them as
+    characters, giving them some letterspacing.
+    Setting `display: block` removes that spacing.
+  */
+  width: 100%;
+}
+
+figure {
+  margin-bottom: var(--gap);
+}
+
+figcaption {
+  font-size: 0.875rem;
+  margin-top: var(--gap-sm);
+  border-left: 2px solid #d1d1d1;
+  padding-left: var(--gap);
+
+  & a {
+    color: #868686;
+  }
+}
+
+ul {
+  column-count: 3;
+  column-gap: var(--gap);
+  padding: var(--gap);
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+li {
+  break-inside: none;
+}
