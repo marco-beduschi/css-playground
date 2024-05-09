@@ -1,0 +1,58 @@
+<style>
+  body,
+  main {
+    height: 100%;
+  }
+
+  main {
+    margin: 16px;
+  }
+
+  .background {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    margin-right: 4px;
+    margin-left: 4px;
+    height: 175px;
+    background-size: 75px 75px;
+    background-color: hsl(149.79deg 45.4% 63.1%);
+    background-image: url("./assets/house.webp");
+    border-radius: 4px;
+    outline: 2px solid hsl(149.79deg 45.4% 63.1%);
+    outline-offset: 4px;
+  }
+
+  .round {
+    background-repeat: round;
+  }
+
+  .space {
+    background-repeat: space;
+  }
+
+  .hint {
+    text-align: center;
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Images</title>
+    <link rel="stylesheet" href="../../reset.css" />
+  </head>
+  <body>
+    <main>
+      <h2>Background-repeat: repeat</h2>
+      (default)
+      <div class="background"></div>
+      <h2>Background-repeat: round</h2>
+      <div class="background round"></div>
+      <h2>Background-repeat: space</h2>
+      <div class="background space"></div>
+      <p class="hint">(Resize window to see the difference)</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<style>
+  body,
+  main {
+    height: 100%;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  select {
+    cursor: pointer;
+    border: 1px solid gray;
+    line-height: 2;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    gap: 8px;
+  }
+
+  li {
+    flex: 1;
+  }
+
+  img {
+    display: block;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.1s all ease-in-out;
+  }
+
+  .select-list {
+    display: flex;
+    gap: 16px;
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aspect Ratio</title>
+  </head>
+  <body>
+    <main>
+      <div class="select-list">
+        <label>
+          Aspect Ratio
+          <select name="Aspect Ratio" id="select-aspect-ratio">
+            <option value="1/1">1 / 1</option>
+            <option value="16/9">16 / 9</option>
+            <option value="4/3">4 / 3</option>
+            <option value="4.8/1">4.8 / 1</option>
+          </select>
+        </label>
+        <label>
+          Object fit
+          <select name="Object Fit" id="select-object-fit">
+            <option value="cover">cover</option>
+            <option value="fill">fill</option>
+            <option value="contain">contain</option>
+            <option value="none">none</option>
+            <option value="scale-down">scale-down</option>
+          </select>
+        </label>
+      </div>
+      <ul>
+        <li>
+          <img
+            src="./assets/doc1.jpeg"
+            alt="A foto of my dog, doc, wearing my shoes"
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/doc2.jpg"
+            alt="A foto of my dog, doc, wearing my shoes"
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/doc3.jpg"
+            alt="A foto of my dog, doc, wearing my shoes"
+          />
+        </li>
+      </ul>
+    </main>
+    <!-- Scripts here, don't remove! -->
+    <script src="./index.js"></script>
+  </body>
+</html>
