@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS/HTML only tabs</title>
+    <link rel="stylesheet" href="../../reset.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      main {
+        height: 100%;
+        margin: 0 auto;
+      }
+      .tab-list {
+        display: grid;
+        width: 100%;
+
+        & input.tab:checked + .tab-content {
+          display: block;
+        }
+      }
+      .tab {
+        width: auto;
+        grid-row-start: 1;
+        appearance: none;
+        padding: 0 16px;
+
+        &:after {
+          content: attr(aria-label);
+        }
+      }
+      .tab-content {
+        grid-column-start: 1;
+        grid-column-end: span 9999;
+        grid-row-start: 2;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div role="tablist" class="tab-list">
+          <input
+            type="radio"
+            name="nav-tab"
+            role="tab"
+            class="tab"
+            aria-label="Tab 1"
+          />
+          <div role="tabpanel" class="tab-content">Tab content 1</div>
+
+          <input
+            type="radio"
+            name="nav-tab"
+            role="tab"
+            class="tab"
+            aria-label="Tab 2"
+            checked
+          />
+          <div role="tabpanel" class="tab-content">Tab content 2</div>
+
+          <input
+            type="radio"
+            name="nav-tab"
+            role="tab"
+            class="tab"
+            aria-label="Tab 3"
+          />
+          <div role="tabpanel" class="tab-content">Tab content 3</div>
+        </div>
+      </nav>
+    </main>
+  </body>
+</html>
